@@ -9,11 +9,17 @@
 <body>
     <h1>To-Do</h1>
     <div class="addTask">
-      <input type="text" name="task" id="taskName">
+      <input type="text" name="task" id="setTaskName">
       <button id="addTask">Add</button>
     </div>
-    <ul class="taskList">
-        <li id="task1"><span id="task">H</span> <button id="rename">rename</button> <button id="delete">delete</button> <input type="text" name="" id="renameInput" class="hidden"></li>
+    <ul id="taskList">
+        <li id="task1">
+            <span id="taskName"></span> 
+            <button id="rename">rename</button> 
+            <button id="del">delete</button> 
+            <input type="text" name="" id="renameInput" class="hidden">
+            <button id="renameInputBtn" class="hidden">Rename</button>
+        </li>
     </ul>
 </body>
 <script src="script.js"></script>
