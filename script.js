@@ -8,10 +8,12 @@ let taskName = document.getElementById('setTaskName');
 
 /* add task */
 addTask.addEventListener("click", function() {
-    const node = document.getElementById("task1");
+    const node = document.getElementById("task");
     const clone = node.cloneNode(true);
+    document.getElementById("task").appendChild(clone); 
     clone.innerText = taskName.value;
-    document.getElementById("task1").appendChild(clone); 
+    node.classList.remove('hidden');
+    
     
 })
 
