@@ -1,20 +1,29 @@
 let addTask = document.getElementById('addTask');
-let task = document.getElementById('task');
-let rename = document.getElementById('rename');
-let renameInput = document.getElementById('renameInput');
-let del = document.getElementById('del');
-let renameInputBtn = document.getElementById('renameInputBtn');
-let taskName = document.getElementById('setTaskName');
+let setTaskName = document.getElementById('setTaskName');
+
+let task0 = document.getElementById('task0');
+let task1 = document.getElementById('task1');
+let task2 = document.getElementById('task2');
+let task3 = document.getElementById('task3');
+let task4 = document.getElementById('task4');
+let task5 = document.getElementById('task5');
+
+let taskName0 = document.getElementById('taskName0');
+let taskName1 = document.getElementById('taskName1');
+let taskName2 = document.getElementById('taskName2');
+let taskName3 = document.getElementById('taskName3');
+let taskName4 = document.getElementById('taskName4');
+let taskName5 = document.getElementById('taskName5');
+
+const tasks = [task0, task1, task2, task3, task4, task5];
+const taskNames = [taskName0, taskName1, taskName2, taskName3, taskName4, taskName5];
+let i = 0;
 
 /* add task */
 addTask.addEventListener("click", function() {
-    const node = document.getElementById("task");
-    const clone = node.cloneNode(true);
-    document.getElementById("task").appendChild(clone); 
-    clone.innerText = taskName.value;
-    node.classList.remove('hidden');
-    
-    
+        taskNames[i].innerText = setTaskName.value;
+        tasks[i].classList.remove('hidden');
+        i++;
 })
 
 /* rename task */
