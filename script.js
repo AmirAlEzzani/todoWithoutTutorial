@@ -17,17 +17,29 @@ addTask.addEventListener("click", function() {
     task.appendChild(del);
     rename.innerHTML = "Rename";
     del.innerHTML = "Delete";
-    rename.setAttribute('id',i);
     rename.setAttribute('class','renameBtn')
-    let renameBtn = document.getElementsByClassName('renameBtn');
+    rename.setAttribute('id',i);
+    task.setAttribute('id',i);
     del.setAttribute('id',i);
     i++;  
 })
 
 /* rename task */
-    renameBtn.addEventListener("click", function() {
-        /* get the id of the rename btn corresponding to the
+var renameButton = document.getElementsByClassName('renameBtn');
+
+PSEUDO CODE BELOW
+document.querySelector('.renameBtn').addEventListener("click", function() {
+    let change = this.id;
+    
+    rename.classList.add('hidden')
+    del.classList.add('hidden')
+    task.appendChild(renameInput);
+    task.appendChild(renameInputBtn);
+    renameInputBtn.addEventListener("click", function(){
+        task.innerText = renameInput.value;
     })
+    
+})
 
 /* delete task */
-
+``
